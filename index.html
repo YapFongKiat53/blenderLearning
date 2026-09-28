@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Blender 每日学习计划</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<div class="wrap">
+
+  <header class="hero">
+    <div class="hero-left">
+      <div class="cube-scene"><div class="cube" id="mascotCube">
+        <div class="cube-face cf-front"></div>
+        <div class="cube-face cf-back"></div>
+        <div class="cube-face cf-right"></div>
+        <div class="cube-face cf-left"></div>
+        <div class="cube-face cf-top"></div>
+        <div class="cube-face cf-bottom"></div>
+      </div></div>
+      <div class="hero-title">
+        <h1>Blender 每日学习计划</h1>
+        <p>每天 30–45 分钟，30 天从零基础到完成第一个作品</p>
+      </div>
+    </div>
+    <div class="streak-badge">
+      <span class="flame">🔥</span>
+      <span id="streakText">连续 0 天</span>
+    </div>
+  </header>
+
+  <section class="dashboard">
+    <div class="ring-wrap">
+      <svg width="108" height="108">
+        <circle class="ring-bg" cx="54" cy="54" r="46" stroke-width="10" fill="none"/>
+        <circle class="ring-fg" id="ringFg" cx="54" cy="54" r="46" stroke-width="10" fill="none"
+                stroke-dasharray="289" stroke-dashoffset="289"/>
+      </svg>
+      <div class="ring-label"><span id="ringPct">0%</span><span>完成度</span></div>
+    </div>
+    <div>
+      <div class="stats-row">
+        <div class="stat"><div class="num" id="statDone">0/30</div><div class="label">已完成天数</div></div>
+        <div class="stat"><div class="num" id="statMinutes">0</div><div class="label">累计学习分钟</div></div>
+        <div class="stat"><div class="num" id="statBest">0</div><div class="label">最长连续天数</div></div>
+      </div>
+      <div class="heatmap" id="heatmap"></div>
+    </div>
+  </section>
+
+  <section class="today-card" id="todayCard"></section>
+
+  <section class="roadmap">
+    <h2 class="section-title">完整路线图</h2>
+    <div id="roadmapList"></div>
+  </section>
+
+  <section>
+    <h2 class="section-title">成就徽章</h2>
+    <div class="badges-row" id="badgesRow"></div>
+  </section>
+
+  <div class="reset-line">
+    <button class="btn-ghost btn-small" id="resetBtn">重置全部进度</button>
+  </div>
+
+  <footer class="foot">保存在你浏览器本地（localStorage），换设备或清缓存会丢失，记得偶尔截图留念。</footer>
+</div>
+
+<div id="toast"></div>
+<canvas id="confetti-canvas"></canvas>
+
+<script src="curriculum.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
